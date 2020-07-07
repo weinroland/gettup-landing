@@ -1,0 +1,45 @@
+<extends src="base.html">
+    <block name="main">
+        <div class="scroller max-w-4xl mx-auto">
+            <include src="01_home.html"></include>
+            <include src="02_ihr.html"></include>
+            <include src="03_wir.html"></include>
+            <include src="04.1_was-spricht-für-uns.html"></include>
+            <include src="04.2_warum-gibt-es-gettup.html"></include>
+            <include src="05.1_was-bieten-wir.html"></include>
+            <include src="05.2_neugierig.html"></include>
+            <include src="06_form.html"></include>
+        </div>
+    </block>
+
+    <block name="footer">
+        <div class="hidden lg:block fixed bottom-0 w-full">
+            <div class="container mx-auto pb-12 px-8 flex justify-between">
+                <include src="whitepaper-link.html"></include>
+                <div>
+                    <button class=""
+                            id="scroll-down">
+                        <svg class="fill-current w-4 inline"
+                             width="15"
+                             height="21"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="#FFF"
+                               fill="none"
+                               fill-rule="evenodd"
+                               stroke-linecap="round">
+                                <path d="M.636 12.896l6.91 6.91 6.909-6.91M7.5 19.5v-18" />
+                            </g>
+                        </svg>
+                    </button>
+                    <nav id="legal"
+                         class="hidden">
+                        <a href="/impressum.html"
+                           class="border-b border-white pb-1 ml-6">Impressum</a>
+                        <a href="/datenschutz.html"
+                           class="border-b border-white pb-1 ml-6">Datenschutz</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </block>
+</extends>

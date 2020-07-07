@@ -1,0 +1,147 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import url('https://use.typekit.net/drz6zel.css');
+
+$red: #fe2736;
+$purple: #4e125a;
+$blue: #140c64;
+
+$gradient: linear-gradient(45deg, $red, $purple);
+
+* {
+    box-sizing: border-box;
+    font-family: rubrik-edge-new, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background: linear-gradient(45deg, $red -25%, $purple 75%);
+}
+
+.gradient {
+    background: $gradient;
+}
+
+.snap-wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.snap-container {
+    @apply flex flex-col justify-center min-h-screen;
+    padding: 10vh 0;
+    scroll-snap-align: start;
+}
+
+.ms-slider {
+    display: inline-block;
+
+    height: 1.5em;
+    overflow: hidden;
+
+    vertical-align: middle;
+
+    mask-image: linear-gradient(transparent, white, white, white, transparent);
+    mask-type: luminance;
+    mask-mode: alpha;
+
+    &__words {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        animation-name: wordSlider;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        animation-duration: 7s;
+    }
+
+    &__word {
+        display: block;
+        line-height: 1.5em;
+        text-align: left;
+    }
+}
+
+ol {
+    list-style: decimal;
+    padding-left: 2rem;
+
+    & > li {
+        padding-bottom: 2rem;
+    }
+
+    p {
+        padding-bottom: 1rem;
+    }
+
+    h3 {
+        font-weight: bold;
+        @apply text-2xl pb-2;
+    }
+}
+
+ul.ul {
+    list-style: disc;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+ol {
+    counter-reset: item;
+
+    & > li {
+        display: block;
+        position: relative;
+    }
+
+    & > li:before {
+        content: counters(item, '.') ' ';
+        counter-increment: item;
+        position: absolute;
+        left: -2rem;
+        top: 0.25rem;
+        @apply text-tiny;
+    }
+}
+
+ol {
+    ol {
+        ol {
+            padding-left: 0;
+
+            li:before {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes wordSlider {
+    $steps: -0%, -25%, -50%, -75%;
+
+    @for $index from 0 to length($steps)-1 {
+        $next: $index + 1;
+        $step: floor(100/ (length($steps)-1));
+        $animation_step: floor($step * 0.2);
+
+        #{$step*$index}%,
+        #{($step*$next) - $animation_step}% {
+            transform: translateY(nth($steps, $index + 1));
+        }
+    }
+
+    100% {
+        transform: translateY(nth($steps, length($steps)));
+    }
+}
+
+@import 'tailwindcss/utilities';
