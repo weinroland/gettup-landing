@@ -10,17 +10,17 @@
     a {
         box-sizing: border-box;
         width: auto !important;
-        height: 36px;
+        height: 36px !important;
         font-family: Ubuntu, Helvetica;
         font-size: 13px;
         text-align: center;
-        line-height: 36px;
+        line-height: 36px !important;
         color: #ffffff;
         border-radius: 14px;
         max-width: 100%;
         white-space: nowrap;
         background: linear-gradient(45deg, #fe2736, #4e125a);
-        padding: 0px 20px;
+        padding: 0px 15px !important;
         cursor: pointer;
         border: none;
         margin-right: 1rem;
