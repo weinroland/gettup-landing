@@ -1,0 +1,54 @@
+#CybotCookiebotDialog {
+    padding: 2rem 0;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: unset;
+}
+
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper {
+    a {
+        box-sizing: border-box;
+        width: auto !important;
+        height: 36px;
+        font-family: Ubuntu, Helvetica;
+        font-size: 13px;
+        text-align: center;
+        line-height: 36px;
+        color: #ffffff;
+        border-radius: 14px;
+        max-width: 100%;
+        white-space: nowrap;
+        background: linear-gradient(45deg, #fe2736, #4e125a);
+        padding: 0px 20px;
+        cursor: pointer;
+        border: none;
+        margin-right: 1rem;
+    }
+}
+
+#CybotCookiebotDialogPoweredbyLink {
+    display: none;
+}
+
+#CybotCookiebotDialogBodyContent {
+    padding: 1rem 0;
+}
+
+#CybotCookiebotDialogBodyLevelWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+
+#CybotCookiebotDialogBodyLevelButtons {
+    float: unset;
+    margin: unset;
+    padding-top: 1rem;
+}

@@ -12,7 +12,7 @@ $gradient: linear-gradient(45deg, $red, $purple);
 
 * {
     box-sizing: border-box;
-    font-family: rubrik-edge-new, sans-serif;
+    font-family: rubrik-edge-new, sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -75,7 +75,7 @@ ol {
     list-style: decimal;
     padding-left: 2rem;
 
-    & > li {
+    &>li {
         padding-bottom: 2rem;
     }
 
@@ -98,12 +98,12 @@ ul.ul {
 ol {
     counter-reset: item;
 
-    & > li {
+    &>li {
         display: block;
         position: relative;
     }
 
-    & > li:before {
+    &>li:before {
         content: counters(item, '.') ' ';
         counter-increment: item;
         position: absolute;
@@ -143,5 +143,7 @@ ol {
         transform: translateY(nth($steps, length($steps)));
     }
 }
+
+@import './cookie.scss';
 
 @import 'tailwindcss/utilities';
