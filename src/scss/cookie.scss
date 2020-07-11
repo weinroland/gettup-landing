@@ -1,5 +1,6 @@
 #CybotCookiebotDialog {
-    padding: 2rem 0;
+    border:1px solid #4e125a !important;
+    background: #ffeff0 !important;
     height: auto;
     position: fixed;
     bottom: 0;
@@ -20,9 +21,9 @@
         max-width: 100%;
         white-space: nowrap;
         background: linear-gradient(45deg, #fe2736, #4e125a);
-        padding: 0px 15px !important;
+        padding: 0px 30px !important;
         cursor: pointer;
-        border: none;
+        border: none !important;
         margin-right: 1rem;
     }
 }
@@ -32,7 +33,7 @@
 }
 
 #CybotCookiebotDialogBodyContent {
-    padding: 1rem 0;
+    padding: 16px 12px 4px 20px !important;
 }
 
 #CybotCookiebotDialogBodyLevelWrapper {
