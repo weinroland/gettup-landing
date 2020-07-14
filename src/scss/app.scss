@@ -75,7 +75,7 @@ ol {
     list-style: decimal;
     padding-left: 2rem;
 
-    &>li {
+    & > li {
         padding-bottom: 2rem;
     }
 
@@ -98,12 +98,12 @@ ul.ul {
 ol {
     counter-reset: item;
 
-    &>li {
+    & > li {
         display: block;
         position: relative;
     }
 
-    &>li:before {
+    & > li:before {
         content: counters(item, '.') ' ';
         counter-increment: item;
         position: absolute;
