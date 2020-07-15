@@ -31,11 +31,11 @@ WRAPPER.addEventListener('scroll', event => {
 
     // show hide logo
     if (c.top < -100) {
-        LOGO.classList.add('w-10');
-        LOGO.classList.remove('w-32');
+        LOGO.classList.add('w-10', 'lg:w-16');
+        LOGO.classList.remove('w-32', 'lg:w-48');
     } else {
-        LOGO.classList.remove('w-10');
-        LOGO.classList.add('w-32');
+        LOGO.classList.remove('w-10', 'lg:w-16');
+        LOGO.classList.add('w-32', 'lg:w-48');
     }
 
     // gradient animation
